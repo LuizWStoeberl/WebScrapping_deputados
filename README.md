@@ -28,7 +28,7 @@
 
 ---
 
-## 📂 Estrutura do Repositório
+##  Estrutura do Repositório
 
 * **`data/`**: Armazena os dados do projeto divididos em `raw` (dados brutos), `processed` (dados limpos e tratados) e `predicted` (projeções futuras do modelo).
 * **`notebooks/`**: Notebook Colab contendo a análise exploratória, limpeza dos dados e o treinamento do modelo preditivo de Séries Temporais.
