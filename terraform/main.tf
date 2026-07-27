@@ -7,22 +7,21 @@ terraform {
   }
 }
 
-# =========================================
 
 # Provider Google Cloud
 
-# =========================================
+
 
 provider "google" {
   project = "projeto-transparencia-496822"
   region  = "us-central1"
 }
 
-# =========================================
+
 
 # APIs necessárias
 
-# =========================================
+
 
 resource "google_project_service" "services" {
   for_each = toset([
@@ -38,11 +37,9 @@ resource "google_project_service" "services" {
   disable_on_destroy = false
 }
 
-# =========================================
-
 # Dataset BigQuery
 
-# =========================================
+
 
 resource "google_bigquery_dataset" "dados_camara" {
   dataset_id = "dados_camara"
@@ -53,11 +50,11 @@ resource "google_bigquery_dataset" "dados_camara" {
   ]
 }
 
-# =========================================
+
 
 # Tabela BigQuery
 
-# =========================================
+
 
 resource "google_bigquery_table" "raw_gastos" {
   dataset_id = google_bigquery_dataset.dados_camara.dataset_id
@@ -113,11 +110,11 @@ resource "google_bigquery_table" "raw_gastos" {
   ]
 }
 
-# =========================================
+
 
 # Bucket da Cloud Function
 
-# =========================================
+
 
 resource "google_storage_bucket" "function_bucket" {
   name     = "bucket-functions-camara-123456"
@@ -126,11 +123,11 @@ resource "google_storage_bucket" "function_bucket" {
   uniform_bucket_level_access = true
 }
 
-# =========================================
+
 
 # Upload ZIP
 
-# =========================================
+
 
 resource "google_storage_bucket_object" "function_zip" {
   name   = "function-source.zip"
@@ -138,11 +135,11 @@ resource "google_storage_bucket_object" "function_zip" {
   source = "function-source.zip"
 }
 
-# =========================================
+
 
 # Cloud Function
 
-# =========================================
+
 
 resource "google_cloudfunctions_function" "api_camara_function" {
 
@@ -172,11 +169,11 @@ resource "google_cloudfunctions_function" "api_camara_function" {
   ]
 }
 
-# =========================================
+
 
 # Permissão HTTP pública
 
-# =========================================
+
 
 resource "google_cloudfunctions_function_iam_member" "invoker" {
   project        = google_cloudfunctions_function.api_camara_function.project
@@ -187,11 +184,11 @@ resource "google_cloudfunctions_function_iam_member" "invoker" {
   member = "allUsers"
 }
 
-# =========================================
+
 
 # Permissão Artifact Registry
 
-# =========================================
+
 
 resource "google_project_iam_member" "artifact_registry_reader" {
 
@@ -201,17 +198,3 @@ resource "google_project_iam_member" "artifact_registry_reader" {
 
   member = "serviceAccount:service-1067506642404@gcf-admin-robot.iam.gserviceaccount.com"
 }
-
-# =========================================
-
-# Permissão Storage Viewer
-
-# =========================================
-
-# =========================================
-
-# Permissão BigQuery
-
-# =========================================
-
-

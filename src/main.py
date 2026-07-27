@@ -24,9 +24,9 @@ def main(request):
     todos_deputados = []
     pagina = 1
 
-    # ==========================================
+    
     # Busca deputados do estado escolhido dinamicamente
-    # ==========================================
+    
     while True:
         # Passamos a variável {estado} que veio da sua URL
         url = (
@@ -51,9 +51,9 @@ def main(request):
 
     linhas = []
 
-    # ==========================
+    
     # Busca despesas
-    # ==========================
+    
     for deputado in todos_deputados:
 
         id_dep = deputado["id"]
@@ -99,9 +99,9 @@ def main(request):
 
         print(f"{nome_dep} concluído")
 
-    # ==========================
+    
     # Insere no BigQuery
-    # ==========================
+    
     if len(linhas) > 0:
         erros = client.insert_rows_json(
             tabela,
