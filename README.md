@@ -5,8 +5,8 @@
 ---
 
 ##  Links Úteis
-*  [Acessar Dashboard Interativo no Looker Studio] https://datastudio.google.com/reporting/31a35358-376c-4afa-89d6-4e634918434c
-*  [Post de Apresentação no LinkedIn](SEU_LINK_AQUI)
+*  Dashboard: https://datastudio.google.com/reporting/31a35358-376c-4afa-89d6-4e634918434c
+*  Post LinkedIn: (SEU_LINK_AQUI)
 
 ---
 
@@ -28,6 +28,16 @@
 
 ---
 
+## 📂 Estrutura do Repositório
+
+* **`data/`**: Armazena os dados do projeto divididos em `raw` (dados brutos), `processed` (dados limpos e tratados) e `predicted` (projeções futuras do modelo).
+* **`notebooks/`**: Notebook Colab contendo a análise exploratória, limpeza dos dados e o treinamento do modelo preditivo de Séries Temporais.
+* **`src/`**: Script Python de ingestão executado via Google Cloud Function.
+* **`terraform/`**: Scripts de Infraestrutura como Código (IaC) para automação dos recursos na GCP.
+* **`sql/`**: Consultas e VIEWs construídas no BigQuery para alimentação do dashboard no Looker Studio.
+
+---
+
 ##  Tecnologias Utilizadas
 * **Linguagens:** Python, SQL, HCL (Terraform)
 * **Cloud Platform:** Google Cloud Platform (Cloud Functions, BigQuery, Cloud Storage)
@@ -36,6 +46,8 @@
 
 ---
 
-## 👤 Autor
+##  Autor
 Desenvolvido por **Luiz Wolfgang Stoeberl**  
-📫 Entre em contato: [LinkedIn] www.linkedin.com/in/luiz-wolfgang-stoeberl-aa56aa261 | [E-mail] luizstoeberl21@gmail.com
+Entre em contato:
+* LinkedIn: www.linkedin.com/in/luiz-wolfgang-stoeberl-aa56aa261
+* E-mail: luizstoeberl21@gmail.com
