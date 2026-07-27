@@ -1,0 +1,18 @@
+# Arquivos de credenciais
+*.json
+service_account.json
+credentials/
+
+
+# Arquivos de terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Arquivos temporários Python e do sistema
+__pycache__/
+*.pyc
+.env
+*.zip
+.DS_Store
