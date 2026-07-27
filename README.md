@@ -30,7 +30,7 @@
 
 ##  Estrutura do Repositório
 
-* **`data/`**: Armazena os dados do projeto divididos em `raw` (dados brutos), `processed` (dados limpos e tratados) e `predicted` (projeções futuras do modelo).
+* **`data/`**: Armazena parte dos dados do projeto divididos em `raw` (dados brutos), `processed` (dados limpos e tratados) e `predicted` (projeções futuras do modelo). Para este projeto, foram postos somente 100 dados das tabelas usadas no dashboard.
 * **`notebooks/`**: Notebook Colab contendo a análise exploratória, limpeza dos dados e o treinamento do modelo preditivo de Séries Temporais.
 * **`src/`**: Script Python de ingestão executado via Google Cloud Function.
 * **`terraform/`**: Scripts de Infraestrutura como Código (IaC) para automação dos recursos na GCP.
