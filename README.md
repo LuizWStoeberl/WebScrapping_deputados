@@ -6,7 +6,7 @@
 
 ##  Links Úteis
 *  Dashboard: https://datastudio.google.com/reporting/31a35358-376c-4afa-89d6-4e634918434c
-*  Post LinkedIn: (SEU_LINK_AQUI)
+*  Post LinkedIn: https://www.linkedin.com/posts/luiz-wolfgang-stoeberl-aa56aa261_dataengineering-datascience-analytics-ugcPost-7488010493773922304-czNQ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEBaS50Bp_dEHAfiEdqc2KHy55QtdpzIwuM
 
 ---
 
